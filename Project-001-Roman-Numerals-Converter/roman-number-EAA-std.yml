@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: |
   This template work as a converter for roman numerals. We create tihs application with python, flask.
-Parameters:
+cd Parameters:
   KeyName:
     Description: Enter the name of your Key Pair for SSH connections
     Type: AWS::EC2::KeyPair::KeyName
@@ -34,6 +34,7 @@ Resources:
         #!/bin/bash
         yum update -y
         yum install python3 -y
+        sudo yum install python3-pip -y
         pip3 install flask
         cd /home/ec2-user
         wget https://raw.githubusercontent.com/EnesAkil/myprojects/main/Project-001-Roman-Numerals-Converter/app.py

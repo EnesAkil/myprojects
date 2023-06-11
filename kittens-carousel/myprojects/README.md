@@ -1,2 +1,0 @@
-# myprojects
-projects on bootcamp

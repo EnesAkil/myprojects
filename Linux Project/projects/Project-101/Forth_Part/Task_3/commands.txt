@@ -1,0 +1,18 @@
+cat auth.log | grep -i "invalid user" | awk -F' ' ' {print $8}' | sed 's/user//g;s/for//g' | sort | uniq -c
+*********************************************************************************
+
+cat auth.log | grep -i "invalid user" | cut -d' ' -f8 | sort > invalid_user.txt
+cat auth.log | grep -i "invalid user" | cut -d' ' -f9 | sort >> invalid_user.txt
+cat invalid_user.txt | grep -v "from" | grep -v "user" | grep -v "for"
+
+************************************************************************
+
+#!/bin/bash
+
+grep "invalid user" auth.log | cut -d' ' -f8 | uniq -c > invalid_user.sh
+grep "invalid user" auth.log | cut -d' ' -f9 | uniq -c >> invalid_user.sh
+cat invalid_user.sh | grep -v "from" | grep -v "user" | grep -v "for" > invalid_user.txt
+
+
+*******************************************************************************
+

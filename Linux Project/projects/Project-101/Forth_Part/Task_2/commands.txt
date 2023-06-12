@@ -1,0 +1,5 @@
+sed 's\//n/\n/g' certificate.pem | tee new.pem 
+
+**********************************************
+
+echo -e $(cat certificate.pem) > new.pem # kolay yöntemi -e komutu aralarda \n satır komutu olduğu için çalıştı

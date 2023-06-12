@@ -1,0 +1,8 @@
+cat info.json | grep PrivateIpAddress | head -1 | cut -d'"' -f4 #json dosyasından private IP'yi çektik
+
+sed "s/ec2-private_ip/172.31.82.220/" terraform.tf #aldığımız ip'yi terraform dosyaysında istenilen yere yapıştırdk.
+
+**************************************
+
+sed "s/ec2-private_ip/$(cat info.json | grep PrivateIpAddress | head -1 | cut -d'"' -f4)/" terraform.tf # iki işlemi birleştiren komut
+

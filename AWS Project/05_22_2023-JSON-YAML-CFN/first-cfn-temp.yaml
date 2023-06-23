@@ -5,12 +5,12 @@ Resources:
   CFNInstance:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-0889a44b331db0194
+      ImageId: ami-022e1a32d3f742bd8
       InstanceType: t2.micro
-      KeyName: okt-aws # Use your keypair name
-      SecurityGroups: 
+      KeyName: test_pair # Use your keypair name
+      SecurityGroups:
         - !Ref CFNSecGr
-      Tags: 
+      Tags:
         - Key: Name
           Value: CFNInstance
 
@@ -18,10 +18,8 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enables SSH. # Required
-      SecurityGroupIngress: 
+      SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 22
           ToPort: 22
           CidrIp: 0.0.0.0/0
-
-

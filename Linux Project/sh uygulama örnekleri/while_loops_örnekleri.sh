@@ -1,4 +1,4 @@
-****** 1'den 10'a kadar sayıları yazdırma****
+****** 1'den 10'a kadar sayilari yazdirma****
 
 #!/bin/bash
 
@@ -23,7 +23,7 @@ done
 
 
 
- ** İlk iki kod son satıra 11 yazıdırı. **
+ ** İlk iki kod son satira 11 yazdirma. **
  ------------
 
 #!/bin/bash
@@ -37,13 +37,13 @@ do
 done
 echo "Now, number is $number"
 
-*** bu kod until ile yazıldığı için son satırda 10 yazar **
+*** bu kod until ile yazildiği için son satirda 10 yazar **
 ----------------
 
 
 
 
-***** For ile dosya içine bir şeyler yazdırma ya da klasöre dosya atama ****
+***** For ile dosya içine bir şeyler yazdirma ya da klasöre dosya atama ****
 
 #!/bin/bash
 
@@ -64,7 +64,7 @@ done
 echo "Files in current folder:"
 
 for file in `pwd`/*
-do
+
    echo $file
 done
 
@@ -142,6 +142,16 @@ do
   then
     break
   fi
+done
+
+
+------------------------
+#!/bin/bash
+
+for (( i=1; i<=100; i++ )); do
+    if (( i % 10 == 0 )); then
+        echo $i
+    fi
 done
 
 ------------------------

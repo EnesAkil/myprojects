@@ -86,9 +86,7 @@ In the architecture, you can configure your infrastructure using the followings,
 
     - Launch Template only allows HTTP (80) and HTTPS (443) ports coming from ALB Security Group and SSH (22) connections from anywhere.
 
-    - EC2 Instances type can be configured as `t2.micro` - 
-    
-    - IMAGE >>>>> ami-0729e439b6769d6ab (Ubuntu 18.04 from Community AMI)
+    - EC2 Instances type can be configured as `t2.micro`.
 
     - Instance launched should be tagged `Clarusway AWS Capstone Project`
 
@@ -98,7 +96,7 @@ In the architecture, you can configure your infrastructure using the followings,
   
     - Instance type can be configured as `db.t2.micro`
 
-    - Database engine can be `MySQL` with version of `8.0.28`.
+    - Database engine can be `MySQL` with version of `8.0.20`.
 
     - RDS endpoint should be addressed within settings file of blog application that is explained developer notes.
 

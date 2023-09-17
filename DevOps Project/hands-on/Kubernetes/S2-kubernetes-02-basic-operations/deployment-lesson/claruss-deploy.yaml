@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clarus-deploy
+  labels:
+    app: clarusweb
+  annotations:
+    kubernetes.io/change-cause: deploy/clarus-deploy is set as clarusweb=clarusway/clarusweb:1.0
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: clarusweb
+  template:
+    metadata:
+      labels:
+        app: clarusweb
+    spec:
+      containers:
+      - name: clarusweb
+        image: clarusway/clarusweb:1.0
+        ports:
+        - containerPort: 80

@@ -5,7 +5,7 @@ metadata:
   labels:
     env: dev
 spec:
-  type: ClusterIP  
+  type: NodePort  
   ports:
   - port: 3000  
     targetPort: 5000

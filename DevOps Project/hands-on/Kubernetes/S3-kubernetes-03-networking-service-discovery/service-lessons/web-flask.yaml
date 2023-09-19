@@ -1,12 +1,12 @@
-apiVersion: apps/v1 
-kind: Deployment 
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: web-flask-deploy
   labels:
-    env: dev
+    app: flask
 spec:
-  replicas: 3 
-  selector:  
+  replicas: 3
+  selector:
     matchLabels:
       app: web-flask
   minReadySeconds: 10 
@@ -14,8 +14,8 @@ spec:
     type: RollingUpdate 
     rollingUpdate:
       maxUnavailable: 1 
-      maxSurge: 1 
-  template: 
+      maxSurge: 1       
+  template:
     metadata:
       labels:
         app: web-flask

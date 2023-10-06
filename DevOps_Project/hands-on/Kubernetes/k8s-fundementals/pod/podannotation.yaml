@@ -3,9 +3,9 @@ kind: Pod
 metadata:
   name: annotationpod
   annotations:
-    owner: "Ozgur OZTURK"
+    owner: "EAA"
     notification-email: "admin@k8sfundamentals.com"
-    releasedate: "01.01.2021"
+    releasedate: "06.10.2023"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
 spec:
   containers:

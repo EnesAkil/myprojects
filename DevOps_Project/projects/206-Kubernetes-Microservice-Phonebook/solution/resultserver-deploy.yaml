@@ -21,9 +21,9 @@ spec:
         - containerPort: 80
         # env:
         # - name: MYSQL_PASSWORD
-        #   # value: Clarusway_1
+        #   # value: EAA_1
         # - name: MYSQL_USER
-        #   value: Clarus
+        #   value: EAA
         # - name: MYSQL_DATABASE
         #   value: phonebook
         # - name: MYSQL_DATABASE_HOST  

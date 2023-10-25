@@ -1,5 +1,5 @@
 variable "git-name" {
-  default = "ofidan"
+  default = "EnesAkil"
 }
 
 variable "git-token" {
@@ -7,9 +7,9 @@ variable "git-token" {
 }
 
 variable "key-name" {
-  default = "oliver"
+  default = "enes"
 }
 
 variable "hosted-zone" {
-  default = "clarusway.us"
+  default = "enesakilakbalik.com"
 }

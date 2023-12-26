@@ -9,7 +9,3 @@ variable "git-token" {
 variable "key-name" {
   default = "enes"
 }
-
-variable "hosted-zone" {
-  default = "enesakilakbalik.com"
-}
